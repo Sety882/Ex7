@@ -1,22 +1,130 @@
 import java.util.Scanner;
-public class Ex5 {
+public class Preguntas {
 
-    public static void main(String[] args) {
+    public static String[] preguntas = {
 
-        Scanner input = new Scanner(System.in);
+            "1. ¿Cuál de estos NO es un tipo primitivo en Java?",
+            "2. ¿Qué palabra se utiliza para declarar un entero?",
+            "3. ¿Qué símbolo se utiliza para terminar una instrucción en Java?",
+            "4. ¿Qué tipo de dato almacena texto?",
+            "5. ¿Qué valor representa verdadero?",
+            "6. ¿Qué palabra se utiliza para crear una clase?",
+            "7. ¿Cuál es el método principal de Java?",
+            "8. ¿Qué se utiliza para mostrar texto por pantalla?",
+            "9. ¿Qué tipo de dato almacena números decimales?",
+            "10. ¿Qué palabra se utiliza para crear un objeto?",
 
-        String pregunta = "Indica cual de las siguientes opciones no es un tipo primitivo en Java:";
-        String[] respuestas = {
-                "a. int",
-                "b. char",
-                "c. boolean",
-                "d. String"
-        };
+            "11. ¿Qué estructura permite repetir instrucciones?",
+            "12. ¿Qué palabra se utiliza para una condición?",
+            "13. ¿Qué significa el operador ==?",
+            "14. ¿Qué símbolo representa la suma?",
+            "15. ¿Qué símbolo representa la resta?",
+            "16. ¿Qué palabra representa lo contrario de true?",
+            "17. ¿Qué tipo de dato almacena un carácter?",
+            "18. ¿Qué palabra se utiliza para declarar una constante?",
+            "19. ¿Qué instrucción permite salir de un bucle?",
+            "20. ¿Qué instrucción permite saltar a la siguiente iteración?",
 
-        System.out.println(pregunta);
-        for (int i = 0; i < respuestas.length; i++) {
-            System.out.println(respuestas[i]);
-        }
+            "21. ¿Qué clase permite leer datos del usuario?",
+            "22. ¿Qué método lee una línea de texto?",
+            "23. ¿Qué método obtiene un número entero con Scanner?",
+            "24. ¿Qué símbolo se utiliza para los comentarios de una línea?",
+            "25. ¿Cómo empieza normalmente un programa Java?",
+            "26. ¿Qué extensión tienen los archivos Java?",
+            "27. ¿Qué método devuelve la longitud de un String?",
+            "28. ¿Qué método convierte un String a mayúsculas?",
+            "29. ¿Qué palabra se utiliza para indicar que un método no devuelve nada?",
+            "30. ¿Qué palabra se utiliza para devolver un resultado?",
 
-    }
+            "31. ¿Qué índice tiene el primer elemento de un array?",
+            "32. ¿Qué palabra se utiliza para crear un array?",
+            "33. ¿Qué propiedad indica el tamaño de un array?",
+            "34. ¿Qué estructura permite recorrer un array?",
+            "35. ¿Qué tipo de dato almacena true o false?",
+            "36. ¿Qué operador representa AND?",
+            "37. ¿Qué operador representa OR?",
+            "38. ¿Qué palabra se utiliza para elegir entre varios casos?",
+            "39. ¿Qué palabra se utiliza junto a if cuando la condición es falsa?",
+            "40. ¿Qué operador representa la multiplicación?",
+
+            "41. ¿Qué palabra se utiliza para heredar de otra clase?",
+            "42. ¿Qué palabra impide que una clase sea heredada?",
+            "43. ¿Qué palabra permite acceder desde cualquier clase?",
+            "44. ¿Qué palabra indica que un atributo pertenece a la clase?",
+            "45. ¿Qué es un constructor?",
+            "46. ¿Qué palabra se utiliza para crear una subclase?",
+            "47. ¿Qué tipo de dato representa números enteros grandes?",
+            "48. ¿Qué método compara dos String por su contenido?",
+            "49. ¿Qué palabra se utiliza para gestionar excepciones?",
+            "50. ¿Qué palabra se utiliza para capturar una excepción?"
+    };
+
+    public static String[][] opciones = {
+
+            {"a. String", "b. int", "c. char", "d. boolean"},
+            {"a. int", "b. text", "c. number", "d. integer"},
+            {"a. :", "b. ;", "c. .", "d. ,"},
+            {"a. int", "b. boolean", "c. String", "d. char"},
+            {"a. false", "b. 0", "c. true", "d. null"},
+            {"a. class", "b. create", "c. object", "d. new"},
+            {"a. start()", "b. main()", "c. run()", "d. begin()"},
+            {"a. Scanner", "b. input()", "c. System.out.println()", "d. read()"},
+            {"a. boolean", "b. double", "c. char", "d. String"},
+            {"a. class", "b. new", "c. create", "d. start"},
+
+            {"a. if", "b. for", "c. class", "d. return"},
+            {"a. if", "b. print", "c. new", "d. int"},
+            {"a. Asignar", "b. Comparar", "c. Sumar", "d. Restar"},
+            {"a. +", "b. -", "c. *", "d. /"},
+            {"a. +", "b. *", "c. -", "d. /"},
+            {"a. yes", "b. false", "c. no", "d. null"},
+            {"a. int", "b. char", "c. double", "d. String"},
+            {"a. final", "b. static", "c. public", "d. void"},
+            {"a. continue", "b. return", "c. break", "d. stop"},
+            {"a. break", "b. continue", "c. exit", "d. stop"},
+
+            {"a. Scanner", "b. String", "c. System", "d. Math"},
+            {"a. nextInt()", "b. nextLine()", "c. print()", "d. read()"},
+            {"a. nextLine()", "b. next()", "c. nextInt()", "d. println()"},
+            {"a. //", "b. **", "c. ##", "d. --"},
+            {"a. class", "b. main", "c. public static void main", "d. start"},
+            {"a. .txt", "b. .java", "c. .class", "d. .js"},
+            {"a. size()", "b. length()", "c. count()", "d. getSize()"},
+            {"a. toLowerCase()", "b. equals()", "c. toUpperCase()", "d. compare()"},
+            {"a. int", "b. return", "c. void", "d. static"},
+            {"a. return", "b. print", "c. break", "d. void"},
+
+            {"a. 1", "b. 0", "c. -1", "d. 2"},
+            {"a. array", "b. new", "c. create", "d. list"},
+            {"a. size", "b. length", "c. count", "d. total"},
+            {"a. if", "b. switch", "c. for", "d. try"},
+            {"a. int", "b. char", "c. boolean", "d. double"},
+            {"a. &&", "b. ||", "c. !=", "d. =="},
+            {"a. &&", "b. ||", "c. !", "d. =="},
+            {"a. if", "b. for", "c. switch", "d. while"},
+            {"a. else", "b. new", "c. return", "d. break"},
+            {"a. +", "b. -", "c. *", "d. /"},
+
+            {"a. implements", "b. extends", "c. inherits", "d. super"},
+            {"a. static", "b. public", "c. final", "d. private"},
+            {"a. private", "b. protected", "c. public", "d. static"},
+            {"a. static", "b. final", "c. public", "d. void"},
+            {"a. Un método especial que se ejecuta al crear un objeto",
+                    "b. Una variable",
+                    "c. Un bucle",
+                    "d. Un tipo de dato"},
+            {"a. extends", "b. implements", "c. new", "d. class"},
+            {"a. short", "b. long", "c. char", "d. boolean"},
+            {"a. ==", "b. compare()", "c. equals()", "d. ="},
+            {"a. try", "b. catch", "c. throw", "d. final"},
+            {"a. try", "b. catch", "c. finally", "d. return"}
+    };
+
+    public static String[] respuestasCorrectas = {
+            "a", "a", "b", "c", "c", "a", "b", "c", "b", "b",
+            "b", "a", "b", "a", "c", "b", "b", "a", "c", "b",
+            "a", "b", "c", "a", "c", "b", "b", "c", "c", "a",
+            "b", "b", "b", "c", "c", "a", "b", "c", "a", "c",
+            "b", "c", "c", "a", "a", "a", "b", "c", "b", "b"
+    };
 }
